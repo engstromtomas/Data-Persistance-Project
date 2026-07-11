@@ -10,6 +10,7 @@ public class MenuManager : MonoBehaviour
 
     public string activePlayerName;                 // Variable to store the active player name
     public int activeScore;                         // Variable to store the active score
+
     public string bestScorePlayerName;              // Variable to store the name of the player with the highest score
     public int bestScore;                           // Variable to store the highest score
 
@@ -27,7 +28,7 @@ public class MenuManager : MonoBehaviour
 
 
     [System.Serializable]
-    class SaveData
+    class MyData
     {
         public string bestScorePlayerName;
         public int bestScore;
@@ -35,7 +36,7 @@ public class MenuManager : MonoBehaviour
 
     public void SavePlayerName()                    // Save the player name to a JSON file
     {
-        SaveData data = new SaveData();
+        MyData data = new MyData();
         data.bestScorePlayerName = bestScorePlayerName;
         data.bestScore = bestScore;
 
@@ -50,7 +51,7 @@ public class MenuManager : MonoBehaviour
         if (File.Exists(path))
         {
             string json = File.ReadAllText(path);
-            SaveData data = JsonUtility.FromJson<SaveData>(json);
+            MyData data = JsonUtility.FromJson<MyData>(json);
 
             bestScorePlayerName = data.bestScorePlayerName;
             bestScore = data.bestScore;

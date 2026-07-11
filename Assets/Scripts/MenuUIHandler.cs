@@ -39,6 +39,6 @@ public class MenuUIHandler : MonoBehaviour
     public void SetPlayerName()                     // Method to set the player name from the input field
     {
         MenuManager.Instance.activePlayerName = inputField.text;
-        Debug.Log("Player Name: " + MenuManager.Instance.activePlayerName);    // Log the player name to the console for debugging
+        Debug.Log("Player Name:" + MenuManager.Instance.activePlayerName);    // Log the player name to the console for debugging
     }
 }

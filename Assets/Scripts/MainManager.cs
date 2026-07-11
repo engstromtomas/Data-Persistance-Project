@@ -14,7 +14,6 @@ public class MainManager : MonoBehaviour
 
     public Text ActivePlayerText;
     public Text ActiveScoreText;
-    private Text BestScoreText;
     public Text BestScoreNameText;
     public GameObject GameOverText;
     
@@ -75,15 +74,15 @@ public class MainManager : MonoBehaviour
 
     void ActivePlayer()
     {
-        BestScoreNameText.text = $"{MenuManager.Instance.bestScorePlayerName} {MenuManager.Instance.bestScore}";
-        ActivePlayerText.text = $"Player :{MenuManager.Instance.activePlayerName}";
+        BestScoreNameText.text = $"{MenuManager.Instance.bestScorePlayerName}: {MenuManager.Instance.bestScore} XP";
+        ActivePlayerText.text = $"Player: {MenuManager.Instance.activePlayerName}";
     }
 
 
     void AddPoint(int point)
     {
         m_Points += point;
-        ActiveScoreText.text = $"Score : {m_Points}";
+        ActiveScoreText.text = $"Score: {m_Points} XP";
     }
 
 
@@ -95,7 +94,7 @@ public class MainManager : MonoBehaviour
             MenuManager.Instance.bestScorePlayerName = MenuManager.Instance.activePlayerName;
             Debug.Log($"New High Score: {MenuManager.Instance.bestScore} by {MenuManager.Instance.bestScorePlayerName}");
             MenuManager.Instance.SavePlayerName();
-            BestScoreNameText.text = $"{MenuManager.Instance.bestScorePlayerName} {MenuManager.Instance.bestScore}";
+            BestScoreNameText.text = $"{MenuManager.Instance.bestScorePlayerName}: {MenuManager.Instance.bestScore} XP";
         }
         else
         {
