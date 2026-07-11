@@ -359,8 +359,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1769275929}
         m_TargetAssemblyTypeName: MenuUIHandler, Assembly-CSharp
-        m_MethodName: set_name
-        m_Mode: 0
+        m_MethodName: SetPlayerName
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -706,7 +706,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MenuManager
   playerName: 
-  inputField: {fileID: 0}
 --- !u!1 &589574617
 GameObject:
   m_ObjectHideFlags: 0
@@ -1512,6 +1511,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb30fc7ca03e5fc49a6aeb8026f64fc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MenuUIHandler
+  inputField: {fileID: 28052556}
 --- !u!1 &1823150949
 GameObject:
   m_ObjectHideFlags: 0
